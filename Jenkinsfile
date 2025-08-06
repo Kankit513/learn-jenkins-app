@@ -21,6 +21,14 @@ pipeline {
                 '''
             }
         }
+        stage('Test') {
+            steps {
+                sh '''
+                    echo "Testing the code"
+                    echo "Testing"
+                '''
+            }
+        }
         stage('Deploy') {
             agent {
                 docker {
